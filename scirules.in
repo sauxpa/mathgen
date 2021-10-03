@@ -472,7 +472,7 @@ ADJECTIVE+2 time-uniform
 ADJECTIVE uniform
 ADJECTIVE marginal
 ADJECTIVE empirical
-ADJECTIVE+3 concenrated
+ADJECTIVE+3 concentrated
 ADJECTIVE+2 random
 ADJECTIVE stochastic
 ADJECTIVE linear
@@ -714,6 +714,9 @@ METANOUN integration
 METANOUN derivation
 METANOUN+2 KL divergence
 METANOUN+2 Bregman divergence
+METAVERB concentrate
+METAVERBED concentrated
+METAVERBING concentrating
 METANOUN+2 concentration
 METAVERB extend
 METAVERBED extended
