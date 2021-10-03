@@ -75,7 +75,7 @@ PROPOSITION
 
 
 PROOF {
-\begin{proof} 
+\begin{proof}
 PROOFTEXT
 \end{proof}
 }
@@ -93,7 +93,7 @@ PROPOSITION ASSUMPTION.  ASSUMPTION.  Further, ASSUMPTION.  Then ASSERTION.
 COND+5 $VAR$ is PROPPHRASE
 COND+5 $VAR$ is RELATED $VAR$
 COND+5 $SHORTEQ$
-COND the Riemann hypothesis holds
+# COND the Riemann hypothesis holds
 COND FAMOUSPOS condition is satisfied
 COND FAMOUSPOS criterion applies
 
@@ -287,10 +287,10 @@ DISCUSSION CONNECT DISCUSS
 DISCUSSION CONNECT SDISCUSS
 
 DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION
-DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION 
+DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION
 DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION
 DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION
-DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION 
+DISCUSSIONPARA SDISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION DISCUSSION
 
 ##############################################################
 ###### Equations
@@ -305,9 +305,11 @@ CONST 2
 CONST \sqrt{2}
 CONST \infty
 CONST -\infty
-CONST \aleph_0
 CONST i
 CONST \emptyset
+CONST \log{T}
+CONST \mathcal{K}_{\text{inf}}
+CONST \mathcal{F}
 
 FVAR+10 VAR
 FVAR | VAR |
@@ -361,22 +363,30 @@ PADVERB PREFIX-ADVERB
 PADJECTIVE+3 ADJECTIVE
 PADJECTIVE PREFIX-ADJECTIVE
 
-ADJECTIVE $p$-adic
 ADJECTIVE $n$-dimensional
-ADJECTIVE Artinian
-ADJECTIVE Euclidean
-ADJECTIVE Gaussian
-ADJECTIVE Noetherian
-ADJECTIVE Riemannian
-ADJECTIVE abelian
+ADJECTIVE+5 Gaussian
+ADJECTIVE Brownian
+ADJECTIVE Pareto
+ADJECTIVE exponential
+ADJECTIVE+5 Bernoulli
+ADJECTIVE+5 Markov
+ADJECTIVE Markovian
+ADJECTIVE+2 sub-Gaussian
+ADJECTIVE+2 sub-exponential
+ADJECTIVE Bentkusian
+ADJECTIVE Galoisian
+ADJECTIVE topological
 ADJECTIVE additive
+ADJECTIVE sub-additive
+ADJECTIVE sub-multiplicative
 ADJECTIVE admissible
 ADJECTIVE affine
 ADJECTIVE algebraic
-ADJECTIVE arithmetic
-ADJECTIVE associative
+ADJECTIVE combinatorial
+ADJECTIVE semi-combinatorial
 ADJECTIVE bijective
 ADJECTIVE bounded
+ADJECTIVE semi-bounded
 ADJECTIVE canonical
 ADJECTIVE characteristic
 ADJECTIVE closed
@@ -384,30 +394,27 @@ ADJECTIVE commutative
 ADJECTIVE compact
 ADJECTIVE complete
 ADJECTIVE complex
-ADJECTIVE composite
+ADJECTIVE simplicial
 ADJECTIVE connected
 ADJECTIVE continuous
 ADJECTIVE contravariant
 ADJECTIVE convex
+ADJECTIVE quasiconvex
 ADJECTIVE countable
-ADJECTIVE covariant
 ADJECTIVE SIGN definite
 ADJECTIVE degenerate
 ADJECTIVE dependent
 ADJECTIVE differentiable
+ADJECTIVE duelling
 ADJECTIVE elliptic
-ADJECTIVE embedded
-ADJECTIVE empty
 ADJECTIVE extrinsic
 ADJECTIVE finite
 ADJECTIVE free
 ADJECTIVE generic
 ADJECTIVE geometric
-ADJECTIVE holomorphic
 ADJECTIVE hyperbolic
 ADJECTIVE independent
 ADJECTIVE infinite
-ADJECTIVE injective
 ADJECTIVE integrable
 ADJECTIVE integral
 ADJECTIVE intrinsic
@@ -418,9 +425,7 @@ ADJECTIVE isometric
 ADJECTIVE linear
 ADJECTIVE local
 ADJECTIVE maximal
-ADJECTIVE meager
 ADJECTIVE measurable
-ADJECTIVE meromorphic
 ADJECTIVE minimal
 ADJECTIVE multiplicative
 ADJECTIVE natural
@@ -434,8 +439,6 @@ ADJECTIVE ordered
 ADJECTIVE orthogonal
 ADJECTIVE parabolic
 ADJECTIVE partial
-ADJECTIVE prime
-ADJECTIVE projective
 ADJECTIVE real
 ADJECTIVE reducible
 ADJECTIVE regular
@@ -447,13 +450,37 @@ ADJECTIVE solvable
 ADJECTIVE stable
 ADJECTIVE standard
 ADJECTIVE stochastic
-ADJECTIVE surjective
 ADJECTIVE symmetric
-ADJECTIVE tangential
-ADJECTIVE trivial
 ADJECTIVE uncountable
+ADJECTIVE trivial
 ADJECTIVE unique
 ADJECTIVE universal
+ADJECTIVE+3 structured
+ADJECTIVE+3 contextual
+ADJECTIVE unbounded
+ADJECTIVE+5 adversarial
+ADJECTIVE+3 worst-case
+ADJECTIVE+10 optimistic
+ADJECTIVE pessimistic
+ADJECTIVE+3 lower-bounded
+ADJECTIVE+3 upper-bounded
+ADJECTIVE approximated
+ADJECTIVE estimated
+ADJECTIVE inferred
+ADJECTIVE+"" optimized
+ADJECTIVE+2 time-uniform
+ADJECTIVE uniform
+ADJECTIVE marginal
+ADJECTIVE empirical
+ADJECTIVE+3 concenrated
+ADJECTIVE+2 random
+ADJECTIVE stochastic
+ADJECTIVE linear
+ADJECTIVE multilinear
+ADJECTIVE sub-linear
+ADJECTIVE+2 logarithmic
+ADJECTIVE observable
+
 ADJECTIVE+25 FAMOUS
 
 SIGN positive
@@ -465,12 +492,12 @@ RELATED not TRELATED
 
 TRELATED isomorphic to
 TRELATED homeomorphic to
-TRELATED diffeomorphic to
 TRELATED equivalent to
 TRELATED comparable to
 TRELATED larger than
 TRELATED smaller than
 TRELATED equal to
+TRELATED stochastically dominated by
 TRELATED dominated by
 TRELATED controlled by
 TRELATED greater than
@@ -492,32 +519,38 @@ ADVERB conditionally
 ADVERB continuously
 ADVERB countably
 ADVERB discretely
-ADVERB essentially
 ADVERB everywhere
-ADVERB freely
 ADVERB finitely
 ADVERB globally
 ADVERB linearly
 ADVERB locally
-ADVERB multiply
 ADVERB naturally
 ADVERB partially
 ADVERB pairwise
 ADVERB pointwise
+ADVERB elementwise
 ADVERB simply
 ADVERB smoothly
 ADVERB stochastically
+ADVERB randomly
+ADVERB exponentially
 ADVERB totally
 ADVERB trivially
 ADVERB unconditionally
 ADVERB universally
+ADVERB adversarially
+ADVERB optimistically
+ADVERB pessimistically
+ADVERB conservatively
+ADVERB sub-linearly
+ADVERB logarithmically
+ADVERB partially
 
 PREFIX semi
 PREFIX quasi
 PREFIX pseudo
-PREFIX hyper
+PREFIX self
 PREFIX super
-PREFIX ultra
 PREFIX co
 PREFIX contra
 PREFIX non
@@ -538,10 +571,8 @@ NOUN SPACE space
 NOUNS SPACE spaces
 NOUN algebra
 NOUNS algebras
-NOUN arrow
-NOUNS arrows
-NOUNS categories
-NOUN category
+NOUN+10 bandit
+NOUNS+10 bandits
 NOUN class
 NOUNS classes
 NOUN curve
@@ -554,14 +585,10 @@ NOUN element
 NOUNS elements
 NOUN factor
 NOUNS factors
-NOUN field
-NOUNS fields
 NOUN function
 NOUN functional
 NOUNS functionals
 NOUNS functions
-NOUN functor
-NOUNS functors
 NOUN graph
 NOUNS graphs
 NOUN group
@@ -572,58 +599,46 @@ NOUN homomorphism
 NOUNS homomorphisms
 NOUN hull
 NOUNS hulls
-NOUN ideal
-NOUNS ideals
 NOUNS isometries
 NOUN isometry
 NOUN isomorphism
 NOUNS isomorphisms
-NOUN line
-NOUNS lines
 NOUN manifold
 NOUNS manifolds
 NOUNS matrices
 NOUN matrix
+NOUN measure
+NOUNS measures
 NOUN modulus
 NOUNS moduli
-NOUN monodromy
-NOUNS monodromies
-NOUN monoid
-NOUNS monoids
 NOUN morphism
 NOUNS morphisms
+NOUN+2 MDP
+NOUNS MDPs
 NOUN number
 NOUNS numbers
 NOUN path
 NOUNS paths
-NOUN plane
-NOUNS planes
 NOUN point
 NOUNS points
-NOUN polytope
-NOUNS polytopes
-NOUN prime
-NOUNS primes
-NOUN random variable
-NOUNS random variables
-NOUN ring
-NOUNS rings
+NOUN probability measure
+NOUNS probability measures
+NOUN+2 process
+NOUNS+2 processes
+NOUN+2 random variable
+NOUNS+2 random variables
 NOUN scalar
 NOUNS scalars
 NOUN set
 NOUNS sets
-NOUNS subalgebras
-NOUN subalgebra
-NOUN subgroup
-NOUNS subgroups
-NOUN subring
-NOUNS subrings
 NOUN subset
 NOUNS subsets
+NOUN sum
+NOUNS sums
+NOUN product
+NOUNS products
 NOUN system
 NOUNS systems
-NOUNS topoi
-NOUN topos
 NOUN triangle
 NOUNS triangles
 NOUN vector
@@ -642,6 +657,9 @@ THINGOF norm of
 METAVERB characterize
 METAVERBED characterized
 METAVERBING characterizing
+METAVERB bound
+METAVERBED bounded
+METAVERBING bounding
 METANOUN characterization
 METAVERB classify
 METAVERBED classified
@@ -676,15 +694,39 @@ METANOUN derivation
 METAVERB examine
 METAVERBED examined
 METAVERBING examining
+METAVERB optimize
+METAVERBED optimized
+METAVERBING optimizing
+METANOUN optimization
+METANOUN relaxation
+METANOUN+3 concentration
+METANOUN deviation
+METANOUN dispersion
+METANOUN estimation
+METANOUN approximation
+METANOUN convexification
+METANOUN+2 randomization
+METANOUN+10 regret
+METANOUN+10 exploration
+METANOUN+5 exploitation
+METANOUN+5 identification
+METANOUN integration
 METANOUN derivation
+METANOUN+2 KL divergence
+METANOUN+2 Bregman divergence
+METANOUN+2 concentration
 METAVERB extend
 METAVERBED extended
 METAVERBING extending
 METANOUN extension
-#METAVERB disprove
-#METAVERBED disproved
-#METAVERBING disproving
-#METANOUN disproof
+METAVERB learn
+METAVERBING learning
+METANOUN+10 learning
+METANOUN+5 lower bound
+METANOUN+5 upper bound
+METAVERBING+2 lower bounding
+METAVERBING+2 upper bounding
+METAVERBING+2 bounding
 
 PROPNOUN continuity
 PROPNOUN+5 existence
@@ -692,6 +734,7 @@ PROPNOUN+5 uniqueness
 PROPNOUN solvability
 PROPNOUN finiteness
 PROPNOUN connectedness
+PROPNOUN optimality
 PROPNOUN structure
 PROPNOUN compactness
 PROPNOUN completeness
@@ -704,7 +747,6 @@ PROPNOUN associativity
 PROPNOUN convexity
 PROPNOUN countability
 PROPNOUN degeneracy
-#PROPNOUN geometry
 PROPNOUN invariance
 PROPNOUN integrability
 PROPNOUN smoothness
@@ -720,8 +762,6 @@ PROPNOUN positivity
 PROPNOUN negativity
 PROPNOUN reducibility
 PROPNOUN separability
-PROPNOUN injectivity
-PROPNOUN surjectivity
 PROPNOUN uncountability
 
 CONCEPT the PROPNOUN of OBJECTS
@@ -733,6 +773,7 @@ CONCEPT the METANOUN of OBJECTS
 CONCEPT PROPNOUN
 CONCEPT questions of PROPNOUN
 CONCEPT an example of FAMOUS
+CONCEPT a counterexample of FAMOUS
 CONCEPT PROPNOUN methods
 
 LOWRVAR a
@@ -765,7 +806,6 @@ LOWGVAR \alpha
 LOWGVAR \beta
 LOWGVAR \gamma
 LOWGVAR \delta
-LOWGVAR \epsilon
 LOWGVAR \varepsilon
 LOWGVAR \zeta
 LOWGVAR \eta
@@ -831,7 +871,7 @@ LOWVAR LOWGVAR
 ONEVAR+5 UPVAR
 ONEVAR+5 LOWVAR
 # Extra brackets for extra protection when used in bibtex
-# bibtex will change $\mathcal{A}$ to $\mathcal{a} 
+# bibtex will change $\mathcal{A}$ to $\mathcal{a}
 # but leaves $\mathcal{{A}}$ alone.
 # Still doesn't quite work.  See BUGS.
 ONEVAR \mathbf{{LOWRVAR}}
@@ -878,12 +918,12 @@ EXPRB EXPRA EXPRA
 EXPRB \frac{1}{EXPRA}
 
 FUNC+2 \exp
-FUNC \sin
-FUNC \cos
-FUNC \tan
-FUNC \sinh
-FUNC \cosh
-FUNC \tanh
+# FUNC \sin
+# FUNC \cos
+# FUNC \tan
+# FUNC \sinh
+# FUNC \cosh
+# FUNC \tanh
 FUNC+2 \log
 FUNC+6 VAR
 
@@ -902,8 +942,8 @@ LIMOP \sup
 LIMOP \inf
 LIMOP \max
 LIMOP \min
-LIMOP \varinjlim
-LIMOP \varprojlim
+# LIMOP \varinjlim
+# LIMOP \varprojlim
 
 SUMOP+2 \sum
 SUMOP \prod
@@ -919,10 +959,10 @@ INTOP \iiint
 INTOP \oint
 
 BIGOP LIMOP
-BIGOP LIMOP_{VAR \to CONST} 
-BIGOP SUMOP 
-BIGOP SUMOP_{VAR \in VAR} 
-BIGOP SUMOP_{VAR = CONST}^{CONST} 
+BIGOP LIMOP_{VAR \to CONST}
+BIGOP SUMOP
+BIGOP SUMOP_{VAR \in VAR}
+BIGOP SUMOP_{VAR = CONST}^{CONST}
 
 INTLIM INTOP
 INTLIM INTOP_{VAR}
@@ -940,7 +980,7 @@ EXPRD EXPRC BINOP EXPRC
 EXPRD+1 EXPRC
 
 EXPRE EXPRD BINOP EXPRC
-EXPRE EXPRD BINOP \dots BINOP EXPRC 
+EXPRE EXPRD BINOP \dots BINOP EXPRC
 EXPRE \left\{ EXPRB \colon MEDEQ \right\}
 EXPRE+1 EXPRD
 
@@ -972,127 +1012,88 @@ FAMOUS FAMOUSLAST--FAMOUSLAST
 
 FAMOUSPOS FAMOUSLAST's
 
-FAMOUSLAST Abel
-FAMOUSLAST Archimedes
-FAMOUSLAST Artin
-FAMOUSLAST Atiyah
-FAMOUSLAST Banach
-FAMOUSLAST Beltrami
-FAMOUSLAST Bernoulli
-FAMOUSLAST Boole
-FAMOUSLAST Borel
-FAMOUSLAST Brahmagupta
-FAMOUSLAST Brouwer
-FAMOUSLAST Cantor
-FAMOUSLAST Cardano
-FAMOUSLAST Cartan
-FAMOUSLAST Cauchy
-FAMOUSLAST Cavalieri
-FAMOUSLAST Cayley
-FAMOUSLAST Chebyshev
-FAMOUSLAST Chern
-FAMOUSLAST Clairaut
-FAMOUSLAST Clifford
-FAMOUSLAST Conway
-FAMOUSLAST D\'escartes
-FAMOUSLAST Darboux
-FAMOUSLAST Dedekind
-FAMOUSLAST Deligne
-FAMOUSLAST Desargues
-FAMOUSLAST Dirichlet
-FAMOUSLAST Einstein
-FAMOUSLAST Eisenstein
-FAMOUSLAST Eratosthenes
-FAMOUSLAST Erd\H{o}s
-FAMOUSLAST Euclid
-FAMOUSLAST Eudoxus
-FAMOUSLAST Euler
-FAMOUSLAST Fermat
-FAMOUSLAST Fibonacci
-FAMOUSLAST Fourier
-FAMOUSLAST Fr\'echet
-FAMOUSLAST Frobenius
-FAMOUSLAST G\"odel
-FAMOUSLAST Galileo
-FAMOUSLAST Galois
-FAMOUSLAST Gauss
-FAMOUSLAST Germain
-FAMOUSLAST Grassmann
-FAMOUSLAST Green
-FAMOUSLAST Grothendieck
-FAMOUSLAST Hadamard
-FAMOUSLAST Hamilton
-FAMOUSLAST Hardy
-FAMOUSLAST Hausdorff
-FAMOUSLAST Heaviside
-FAMOUSLAST Hermite
-FAMOUSLAST Hilbert
-FAMOUSLAST Hippocrates
-FAMOUSLAST Huygens
-FAMOUSLAST Jacobi
-FAMOUSLAST Jordan
-FAMOUSLAST Kepler
-FAMOUSLAST Klein
-FAMOUSLAST Kolmogorov
-FAMOUSLAST Kovalevskaya
-FAMOUSLAST Kronecker
-FAMOUSLAST Kummer
-FAMOUSLAST Lagrange
-FAMOUSLAST Lambert
-FAMOUSLAST Landau
+FAMOUSLAST Abbasi-Yadkori
+FAMOUSLAST Agarwal
+FAMOUSLAST Agrawal
+FAMOUSLAST Audibert
+FAMOUSLAST Auer
+FAMOUSLAST Abeille
+FAMOUSLAST Baudry
+FAMOUSLAST Bartlett
+FAMOUSLAST Bellman
+FAMOUSLAST Bentkus
+FAMOUSLAST Bernstein
+FAMOUSLAST Bertsekas
+FAMOUSLAST Bertsimas
+FAMOUSLAST Billingsley
+FAMOUSLAST Birgé
+FAMOUSLAST Blackwell
+FAMOUSLAST Bottou
+FAMOUSLAST Boucheron
+FAMOUSLAST Bubeck
+FAMOUSLAST Burnetas
+FAMOUSLAST Cappé
+FAMOUSLAST Carpentier
+FAMOUSLAST Catoni
+FAMOUSLAST Cesa-Bianchi
+FAMOUSLAST Chernoff
+FAMOUSLAST Combes
+FAMOUSLAST Degenne
+FAMOUSLAST Dembo
+FAMOUSLAST Doob
+FAMOUSLAST Garivier
+FAMOUSLAST Gittins
+FAMOUSLAST Ghavamzadeh
+FAMOUSLAST Goyal
+FAMOUSLAST Filippi
+FAMOUSLAST Hoeffding
+FAMOUSLAST Honda
+FAMOUSLAST Kaufmann
+FAMOUSLAST Katehakis
+FAMOUSLAST Kirschner
+FAMOUSLAST Koolen
+FAMOUSLAST Korda
+FAMOUSLAST Krause
+FAMOUSLAST Kveton
+FAMOUSLAST Lai
 FAMOUSLAST Laplace
-FAMOUSLAST Lebesgue
-FAMOUSLAST Legendre
-FAMOUSLAST Leibniz
-FAMOUSLAST Levi-Civita
-FAMOUSLAST Lie
-FAMOUSLAST Lindemann
-FAMOUSLAST Liouville
-FAMOUSLAST Littlewood
-FAMOUSLAST Lobachevsky
-FAMOUSLAST M\"obius
-FAMOUSLAST Maclaurin
-FAMOUSLAST Markov
-FAMOUSLAST Maxwell
-FAMOUSLAST Milnor
-FAMOUSLAST Minkowski
-FAMOUSLAST Monge
-FAMOUSLAST Napier
-FAMOUSLAST Newton
-FAMOUSLAST Noether
-FAMOUSLAST P\'olya
-FAMOUSLAST Pappus
-FAMOUSLAST Pascal
-FAMOUSLAST Peano
-FAMOUSLAST Perelman
-FAMOUSLAST Poincar\'e
-FAMOUSLAST Poisson
-FAMOUSLAST Poncelet
-FAMOUSLAST Pythagoras
-FAMOUSLAST Ramanujan
-FAMOUSLAST Riemann
-FAMOUSLAST Russell
-FAMOUSLAST Selberg
-FAMOUSLAST Serre
-FAMOUSLAST Shannon
-FAMOUSLAST Siegel
-FAMOUSLAST Smale
-FAMOUSLAST Steiner
-FAMOUSLAST Sylvester
-FAMOUSLAST Tate
-FAMOUSLAST Taylor
+FAMOUSLAST Lattimore
+FAMOUSLAST Lazaric
+FAMOUSLAST Lugosi
+FAMOUSLAST McDiarmid
+FAMOUSLAST Magureanu
+FAMOUSLAST Maillard
+FAMOUSLAST Mannor
+FAMOUSLAST Massart
+FAMOUSLAST Maurer
+FAMOUSLAST Ménard
+FAMOUSLAST Moulines
+FAMOUSLAST Mnih
+FAMOUSLAST Munos
+FAMOUSLAST Neu
+FAMOUSLAST Perchet
+FAMOUSLAST Pesquerel
+FAMOUSLAST Pinelis
+FAMOUSLAST Pirotta
+FAMOUSLAST Pontil
+FAMOUSLAST Preux
+FAMOUSLAST Proutiere
+FAMOUSLAST Rakhlin
+FAMOUSLAST Robbins
+FAMOUSLAST Russo
+FAMOUSLAST Shalev-Shwartz
+FAMOUSLAST Slivkins
+FAMOUSLAST Soare
+FAMOUSLAST Stoltz
+FAMOUSLAST Szepesvári
+FAMOUSLAST Takemura
+FAMOUSLAST Tewari
 FAMOUSLAST Thompson
-FAMOUSLAST Torricelli
-FAMOUSLAST Turing
-FAMOUSLAST Volterra
-FAMOUSLAST Weierstrass
-FAMOUSLAST Weil
-FAMOUSLAST Weyl
-FAMOUSLAST Wiener
-FAMOUSLAST Wiles
-FAMOUSLAST d'Alembert
-FAMOUSLAST de Moivre
-FAMOUSLAST von Neumann
+FAMOUSLAST Tsitsiklis
+FAMOUSLAST Valko
+FAMOUSLAST Van Roy
+FAMOUSLAST Vernade
+FAMOUSLAST Zeitouni
 
 ##############################################################
 ######## Areas of mathematics
@@ -1114,38 +1115,30 @@ AREAMOD applied
 AREAMOD modern
 
 #AREAADJ na\"{\i}ve # just too much of a pain to prettyprint correctly
-AREAADJ $p$-adic
 AREAADJ Euclidean
 AREAADJ Galois
-AREAADJ Riemannian
 AREAADJ absolute
 AREAADJ abstract
 AREAADJ algebraic
 AREAADJ analytic
 AREAADJ arithmetic
-AREAADJ axiomatic
 AREAADJ commutative
 AREAADJ complex
+AREAADJ combinatorial
 AREAADJ computational
-AREAADJ constructive
-AREAADJ concrete
 AREAADJ convex
-AREAADJ descriptive
 AREAADJ differential
 AREAADJ discrete
 AREAADJ elliptic
-AREAADJ formal
 AREAADJ fuzzy
 AREAADJ general
 AREAADJ geometric
 AREAADJ global
 AREAADJ harmonic
-AREAADJ homological
 AREAADJ hyperbolic
 AREAADJ integral
 AREAADJ linear
 AREAADJ local
-AREAADJ microlocal
 AREAADJ non-commutative
 AREAADJ non-linear
 AREAADJ non-standard
@@ -1161,35 +1154,25 @@ AREAADJ statistical
 AREAADJ stochastic
 AREAADJ symbolic
 AREAADJ topological
-AREAADJ tropical
 AREAADJ universal
 
 AREANOUN Galois theory
-AREANOUN K-theory
-AREANOUN Lie theory
-AREANOUN {PDE}
 AREANOUN algebra
 AREANOUN analysis
 AREANOUN arithmetic
-AREANOUN calculus
-AREANOUN category theory
 AREANOUN combinatorics
 AREANOUN dynamics
 AREANOUN geometry
 AREANOUN graph theory
-AREANOUN group theory
-AREANOUN knot theory
-AREANOUN logic
 AREANOUN measure theory
-AREANOUN mechanics
-AREANOUN model theory
-AREANOUN number theory
-AREANOUN operator theory
-AREANOUN potential theory
 AREANOUN probability
-AREANOUN representation theory
-AREANOUN set theory
 AREANOUN topology
+AREANOUN reinforcement learning
+AREANOUN machine learning
+AREANOUN online learning
+AREANOUN multi-armed bandit
+AREANOUN stochastic bandit
+AREANOUN adversarial bandit
 
 ###################################################
 ###### Titles
@@ -1490,17 +1473,55 @@ GENERIC_LASTNAME Nehru
 GENERIC_LASTNAME Shastri
 GENERIC_LASTNAME Kumar
 
+# Hacky...
+NTH 1st
+NTH 2nd
+NTH 3rd
+NTH 4th
+NTH 5th
+NTH 6th
+NTH 7th
+NTH 8th
+NTH 9th
+NTH 10th
+NTH 11th
+NTH 12th
+NTH 13th
+NTH 14th
+NTH 15th
+NTH 16th
+NTH 17th
+NTH 18th
+NTH 19th
+NTH 20th
+NTH 21st
+NTH 22nd
+NTH 23rd
+NTH 24th
+NTH 25th
+NTH 26th
+NTH 27th
+NTH 28th
+NTH 29th
+NTH 30th
+
 PUBLISHER Springer
 PUBLISHER Birkh\"auser
 PUBLISHER Wiley
 PUBLISHER Elsevier
-PUBLISHER McGraw Hill
 PUBLISHER Cambridge University Press
 PUBLISHER Oxford University Press
-PUBLISHER De Gruyter
-PUBLISHER Prentice Hall
+PUBLISHER The Annals of Statistics
+PUBLISHER Journal of Machine Learning Research
+PUBLISHER International Conference on Artificial Intelligence and Statistics
+PUBLISHER Proceedings of the NTH Annual Conference on Learning Theory
+PUBLISHER Proceedings of the NTH International Joint Conference on Artifical Intelligence
+PUBLISHER Proceedings of the European Conference on Machine Learning
+PUBLISHER COLT
+PUBLISHER International Conference on Machine Learning
+PUBLISHER Advances in Neural Information Processing Systems
 PUBLISHER PLACEADJ Mathematical Society
-
+PUBLISHER PLACEADJ Statistical Society
 
 #############################################################################
 ######## Citations ########
@@ -1522,7 +1543,7 @@ CITATIONLABEL\#
 
 NOCITATION \nocite{CITATION_NEW}
 
-CITE_AUTHOR_LIST+6 AUTHOR 
+CITE_AUTHOR_LIST+6 AUTHOR
 CITE_AUTHOR_LIST+8 AUTHOR and AUTHOR
 CITE_AUTHOR_LIST+3 AUTHOR and AUTHOR and AUTHOR
 CITE_AUTHOR_LIST AUTHOR and AUTHOR and AUTHOR and AUTHOR
